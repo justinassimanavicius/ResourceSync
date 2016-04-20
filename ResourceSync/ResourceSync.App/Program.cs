@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,9 +12,13 @@ namespace ResourceSync.App
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(new Exporter().Export());
+            //Console.WriteLine(new Exporter().Export());
+            
+            var input = File.ReadAllText("out.txt");
 
-            Console.Read();
+            new Exporter().Import(input);
+            Console.WriteLine("Done");
+            Console.ReadKey();
         }
     }
 }

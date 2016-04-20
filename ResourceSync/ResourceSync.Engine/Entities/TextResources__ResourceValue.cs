@@ -10,7 +10,7 @@ namespace ResourceSync.Engine.Entities
         [Key]
         public int ResourceValueID { get; set; }
 
-        [Required]
+        [Required(AllowEmptyStrings = true)]
         public string Value { get; set; }
 
         public DateTime LastModified { get; set; }
